@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+#export PACKER_LOG=1
+rm build/ubuntu-14.04.1-amd64.box || true
+packer build ubuntu-14.04.1-amd64.json
+vagrant box remove myrontuttle/trusty || true
+vagrant box add myrontuttle/trusty  build/ubuntu-14.04.1-amd64.box
