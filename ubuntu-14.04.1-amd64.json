@@ -43,9 +43,10 @@
     {
       "type": "shell",
       "scripts": [
-        "scripts/root_setup.sh",
-        "scripts/vagrant.sh",
-		"scripts/vboxguest.sh"
+        "scripts/upgrade.sh",
+		"scripts/vagrant.sh",
+		"scripts/vboxadditions.sh",
+		"scripts/install_salt.sh"
       ],
 	  "execute_command": "echo 'vagrant' | sudo -S sh '{{ .Path }}'"
     }
